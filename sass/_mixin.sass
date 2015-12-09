@@ -1,0 +1,25 @@
+$primary-color: #8b5c06
+$second-color: #b59e74
+$base-color: #394166
+$color-red: #b72600
+$color-blue: #00508D
+$color-orange:#EF8200
+$color-gray: #f1f1f1
+$color-green: #8FC31F
+$color-p: #333
+$color-text: #666
+$color-hover: #444
+
+@mixin bg($name,$bg)   
+	background-image: url("../img/#{$name}.#{$bg}")
+	background-repeat: no-repeat
+
+@mixin linear-gradient($fromColor,$toColor)
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor) /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor) /* IE10 */
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor) /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $fromColor, $toColor)
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+

@@ -1,0 +1,339 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei";
+}
+
+::selection {
+  background-color: #00508D;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #00508D;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  background-color: #FFF;
+  height: 100px;
+  left: 0;
+  top: 0;
+  border-bottom: 3px #b5b5b5 solid;
+}
+nav .logo {
+  position: absolute;
+  height: 55px;
+  top: 35px;
+  left: 10px;
+}
+nav .logo img {
+  position: relative;
+  height: 100%;
+  width: auto;
+  display: block;
+}
+nav .menu {
+  position: absolute;
+  font-size: 0;
+  bottom: 1px;
+  right: 10px;
+  height: 35px;
+}
+nav .menu li {
+  display: inline-block;
+  margin-left: -1px;
+  position: relative;
+}
+nav .menu li a {
+  color: #666;
+  font-size: 15px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  display: block;
+  border: 1px #e5e5e5 solid;
+  border-bottom: 0px;
+}
+nav .menu li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 159, 201, 0.8);
+}
+
+#wrapper {
+  position: relative;
+  width: 960px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.highlight {
+  width: 100%;
+  background: #E5E5E5;
+  border-bottom: 1px #ccc solid;
+  height: 300px;
+  padding: 20px 0;
+}
+
+.highlight-main {
+  width: 960px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.highlight-main img {
+  width: 100%;
+}
+.highlight-main .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-flex;
+  display: flex;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+}
+.highlight-main .swiper-wrapper .swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.highlight-main .swiper-pagination {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 90%;
+  z-index: 5;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.highlight-main .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+  background: rgba(50, 50, 50, 0.6);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.highlight-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #8FC31F;
+}
+
+#press,
+.latest-press,
+.article {
+  background-color: #f1f1f1;
+  border: 1px #dadada solid;
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  margin: 20px;
+  padding: 20px;
+}
+#press .date,
+.latest-press .date,
+.article .date {
+  color: #EF8200;
+  font-size: 14px;
+  line-height: 22px;
+}
+#press h2,
+.latest-press h2,
+.article h2 {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+#press .summary,
+.latest-press .summary,
+.article .summary {
+  color: #666;
+  font-size: 15px;
+  line-height: 24px;
+  height: 144px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  margin-bottom: 15px;
+}
+#press .more,
+.latest-press .more,
+.article .more {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#press,
+.article {
+  width: 80%;
+  margin: auto;
+  display: block;
+  background-color: transparent;
+  border: 0px;
+}
+#press h1,
+.article h1 {
+  font-size: 24px;
+  margin: 15px 0;
+  line-height: 32px;
+  font-weight: bold;
+  color: #333;
+}
+#press h1.main-title,
+.article h1.main-title {
+  font-size: 32px;
+  color: #00508D;
+}
+#press .inner,
+.article .inner {
+  color: #666;
+  font-size: 15px;
+  line-height: 24px;
+  white-space: pre-wrap;
+}
+
+.article .inner {
+  padding-right: 300px;
+  background-position: right center;
+  background-image: url("../img/soluction.jpg");
+  background-repeat: no-repeat;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+  height: 75px;
+  background-color: #fff;
+  border-top: 3px #b5b5b5 solid;
+}
+footer .container .copy {
+  display: inline-block;
+  width: 50%;
+  color: #666;
+  font-size: 12px;
+  text-indent: 30px;
+  vertical-align: middle;
+}
+footer .container ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+footer .container ul a {
+  color: #666;
+  display: block;
+}
+footer .container ul a:hover {
+  color: #444;
+}
+footer .container ul.bottom-nav {
+  width: 40%;
+  border-left: solid 1px #999;
+  font-size: 13px;
+  height: 72px;
+  width: 220px;
+  padding-left: 30px;
+}
+footer .container ul.bottom-nav li {
+  float: left;
+}
+footer .container ul.bottom-nav li a {
+  width: 100px;
+  line-height: 24px;
+  height: 24px;
+}
+footer .container ul.blank {
+  position: absolute;
+  right: 24px;
+  height: 25px;
+  bottom: 30px;
+}
+footer .container ul.blank li {
+  display: inline-block;
+  font-size: 21px;
+  line-height: 25px;
+  margin: 3px;
+}
