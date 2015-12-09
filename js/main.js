@@ -5,7 +5,7 @@ var app = angular.module('ubitusWebApp', [
 
 //route
 
-app.config(['$routeProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', function($routeProvider/*, $locationProvider*/) {
   $routeProvider
   // Home
     .when("/", {
@@ -43,15 +43,16 @@ app.config(['$routeProvider', function($routeProvider, $locationProvider) {
       templateUrl: "pages/404.html",
       controller: "PageCtrl"
     });
-
+    
     //$locationProvider.html5Mode(true);
 }]);
 
 //controller
 
-app.controller('PageCtrl', function( /* $scope, $location, $http */ ) {
+app.controller('PageCtrl', function( $scope, $route, $location /* , $http */ ) {
 
 
+  console.log($route.current.templateUrl)
 
   //slidshow
   var swiper = new Swiper('.swiper-container', {
@@ -67,6 +68,6 @@ app.controller('PageCtrl', function( /* $scope, $location, $http */ ) {
   //get
     $('.latest-press .date').load('../press/latest.html #press .title .date');
     $('.latest-press h2').load('../press/latest.html #press .title h1');
-    $('.latest-press .summary').load('../press/latest.html #press .inner'); 
+    $('.latest-press .summary').load('../press/latest.html #press .inner');
 });
 
