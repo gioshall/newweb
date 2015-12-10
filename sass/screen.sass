@@ -19,6 +19,19 @@ a
 	&:hover
 		text-decoration: underline
 
+.btn
+	a
+		padding: 8px
+		font-size: 13px
+		background-color: $color-gray
+		color: $color-text
+		display: inline-block
+		+border-radius(2px)
+		&:hover
+			background-color: #dadada
+			text-decoration: none
+
+
 nav
 	position: relative
 	width: 100%
@@ -145,11 +158,13 @@ nav
 		display: -webkit-box
 		-webkit-line-clamp: 6
 		-webkit-box-orient: vertical
-		margin-bottom: 15px
+		margin-bottom: 25px
 	.more
 		position: absolute
 		right: 10px
 		bottom: 10px
+		a
+			background-color: #dedede
 #press,
 .article
 	width: 80%
@@ -173,9 +188,41 @@ nav
 		white-space: pre-wrap
 .article
 	.inner
-		padding-right: 300px
-		background-position: right center
-		+bg(soluction,jpg)
+		&.cloud,
+		&.product
+			padding-right: 300px
+			background-position: right center		
+		&.cloud
+			+bg(soluction,jpg)
+		&.product
+			+bg(ourproduct,jpg)
+			background-size: 300px auto
+		.ftr
+			color: $color-orange
+			font-weight: bold
+			font-size: 16px
+			line-height: 35px
+			text-indent: 15px
+	h1
+		&.slu-tit
+			padding-top: 20px
+			display: inline-block
+			&:nth-of-type(1)
+				border-bottom: 3px #8ec21f solid
+			&:nth-of-type(2)
+				border-bottom: 3px #009fc9 solid
+			&:nth-of-type(3)
+				border-bottom: 3px #ef8200 solid
+	.readmore
+		margin-top: 10px
+
+
+hr
+	height: 1px
+	width: 100%
+	border: 0
+	margin: 50px auto 30px
+	background-color: #999
 
 footer
 	position: relative

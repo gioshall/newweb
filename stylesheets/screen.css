@@ -74,6 +74,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.btn a {
+  padding: 8px;
+  font-size: 13px;
+  background-color: #f1f1f1;
+  color: #666;
+  display: inline-block;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.btn a:hover {
+  background-color: #dadada;
+  text-decoration: none;
+}
+
 nav {
   position: relative;
   width: 100%;
@@ -235,7 +250,7 @@ nav .menu li a:hover {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 #press .more,
 .latest-press .more,
@@ -243,6 +258,11 @@ nav .menu li a:hover {
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+#press .more a,
+.latest-press .more a,
+.article .more a {
+  background-color: #dedede;
 }
 
 #press,
@@ -274,11 +294,49 @@ nav .menu li a:hover {
   white-space: pre-wrap;
 }
 
-.article .inner {
+.article .inner.cloud, .article .inner.product {
   padding-right: 300px;
   background-position: right center;
+}
+.article .inner.cloud {
   background-image: url("../img/soluction.jpg");
   background-repeat: no-repeat;
+}
+.article .inner.product {
+  background-image: url("../img/ourproduct.jpg");
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+}
+.article .inner .ftr {
+  color: #EF8200;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 35px;
+  text-indent: 15px;
+}
+.article h1.slu-tit {
+  padding-top: 20px;
+  display: inline-block;
+}
+.article h1.slu-tit:nth-of-type(1) {
+  border-bottom: 3px #8ec21f solid;
+}
+.article h1.slu-tit:nth-of-type(2) {
+  border-bottom: 3px #009fc9 solid;
+}
+.article h1.slu-tit:nth-of-type(3) {
+  border-bottom: 3px #ef8200 solid;
+}
+.article .readmore {
+  margin-top: 10px;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  border: 0;
+  margin: 50px auto 30px;
+  background-color: #999;
 }
 
 footer {
