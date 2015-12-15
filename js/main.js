@@ -22,7 +22,7 @@ app.config(['$routeProvider', function($routeProvider/*, $locationProvider*/) {
       controller: "PageCtrl",
     })
     .when("/credentials", {
-      templateUrl: "pages/pricing.html",
+      templateUrl: "pages/credentials.html",
       controller: "PageCtrl"
     })
     .when("/press", {

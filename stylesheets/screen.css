@@ -330,6 +330,37 @@ nav .menu li a:hover {
 .article .readmore {
   margin-top: 10px;
 }
+.article .product-list {
+  font-size: 0;
+}
+.article .product-list li {
+  width: 46%;
+  padding: 2%;
+  display: inline-block;
+  height: 180px;
+  vertical-align: top;
+}
+.article .product-list li a {
+  text-decoration: none;
+}
+.article .product-list li:hover {
+  background-color: #f1f1f1;
+}
+.article .product-list li p {
+  font-size: 15px;
+  line-height: 23px;
+  color: #666;
+}
+.article .c-logos {
+  font-size: 0;
+}
+.article .c-logos li {
+  display: inline-block;
+  width: 25%;
+}
+.article .c-logos li img {
+  width: 80%;
+}
 
 hr {
   height: 1px;
