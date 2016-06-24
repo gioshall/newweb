@@ -132,7 +132,7 @@ nav .menu li a {
   border: 1px #e5e5e5 solid;
   border-bottom: 0px;
 }
-nav .menu li a:hover {
+nav .menu li a:hover, nav .menu li a.active {
   color: #fff;
   text-decoration: none;
   background: rgba(0, 159, 201, 0.8);
@@ -274,7 +274,9 @@ nav .menu li a:hover {
   border: 0px;
 }
 #press h1,
-.article h1 {
+#press .press-year,
+.article h1,
+.article .press-year {
   font-size: 24px;
   margin: 15px 0;
   line-height: 32px;
@@ -282,9 +284,17 @@ nav .menu li a:hover {
   color: #333;
 }
 #press h1.main-title,
-.article h1.main-title {
+#press .press-year.main-title,
+.article h1.main-title,
+.article .press-year.main-title {
   font-size: 32px;
   color: #00508D;
+}
+#press .press-year li,
+.article .press-year li {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 15px;
 }
 #press .inner,
 .article .inner {

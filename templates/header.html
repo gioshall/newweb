@@ -2,10 +2,10 @@
     <div class="logo">
         <a href="/"><img src="img/header-logo.svg"></a>
     </div>
-    <div class="menu">
+    <div class="menu" ng-controller="PageCtrl">
         <ul>
             <li>
-                <a href="#/solutions">解決方案</a>
+                <a ng-class="{active:isActive('/solutions')}" href="#/solutions">解決方案</a>
                 <!-- <ul class="sub-menu">
                     <li></li>
                     <li></li>
@@ -13,16 +13,16 @@
                 </ul> -->
             </li>
             <li>
-                <a href="#/products">產品與技術</a>
+                <a ng-class="{active:isActive('/products')}" href="#/products">產品與技術</a>
             </li>
             <li>
-                <a href="#/credentials">客戶及夥伴</a>
+                <a ng-class="{active:isActive('/credentials')}" href="#/credentials">客戶及夥伴</a>
             </li>
             <li>
-                <a href="#/press">新聞中心</a>
+                <a ng-class="{active:isActive('/press')}" href="#/press">新聞中心</a>
             </li>
             <li>
-                <a href="#/aboutubitus">關於我們</a>
+                <a ng-class="{active:isActive('/aboutubitus')}" href="#/aboutubitus">關於我們</a>
             </li>
         </ul>
     </div>

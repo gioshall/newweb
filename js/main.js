@@ -25,17 +25,13 @@ app.config(['$routeProvider', function($routeProvider/*, $locationProvider*/) {
       templateUrl: "pages/credentials.html",
       controller: "PageCtrl"
     })
-    .when("/press", {
-      templateUrl: "pages/services.html",
-      controller: "PageCtrl"
-    })
     .when("/aboutubitus", {
       templateUrl: "pages/contact.html",
       controller: "PageCtrl"
     })
     //press
     .when("/press", {
-      templateUrl: "press/latest.html",
+      templateUrl: "pages/press.html",
       controller: "PageCtrl"
     })
     // else 404
@@ -47,12 +43,19 @@ app.config(['$routeProvider', function($routeProvider/*, $locationProvider*/) {
     //$locationProvider.html5Mode(true);
 }]);
 
+
 //controller
 
 app.controller('PageCtrl', function( $scope, $route, $location /* , $http */ ) {
 
 
-  console.log($route.current.templateUrl)
+  //console.log($route.current.templateUrl)
+
+  //nav
+
+  $scope.isActive = function(route) {
+    return route === $location.path();
+  }
 
   //slidshow
   var swiper = new Swiper('.swiper-container', {
@@ -69,5 +72,6 @@ app.controller('PageCtrl', function( $scope, $route, $location /* , $http */ ) {
     $('.latest-press .date').load('../press/latest.html #press .title .date');
     $('.latest-press h2').load('../press/latest.html #press .title h1');
     $('.latest-press .summary').load('../press/latest.html #press .inner');
+
 });
 

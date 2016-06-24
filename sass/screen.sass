@@ -69,7 +69,8 @@ nav
 				display: block
 				border: 1px #e5e5e5 solid
 				border-bottom: 0px
-				&:hover
+				&:hover,
+				&.active
 					color: #fff
 					text-decoration: none
 					background: rgba(0,159,201,0.8)
@@ -172,7 +173,8 @@ nav
 	display: block
 	background-color: transparent
 	border: 0px
-	h1
+	h1,
+	.press-year
 		font-size: 24px
 		margin: 15px 0
 		line-height: 32px
@@ -181,6 +183,11 @@ nav
 		&.main-title
 			font-size: 32px
 			color: $color-blue
+	.press-year
+		li
+			display: inline-block
+			font-weight: normal
+			margin-right: 15px	
 	.inner
 		color: $color-text
 		font-size: 15px
